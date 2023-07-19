@@ -1,0 +1,21 @@
+// AUTOLAYOUT REFERENCE
+
+interface AutoLayoutMixin {
+  layoutMode: 'NONE' | 'HORIZONTAL' | 'VERTICAL'
+  layoutWrap: 'NO_WRAP' | 'WRAP'
+  paddingLeft: number
+  paddingRight: number
+  paddingTop: number
+  paddingBottom: number
+  horizontalPadding: number
+  verticalPadding: number
+  primaryAxisSizingMode: 'FIXED' | 'AUTO'
+  counterAxisSizingMode: 'FIXED' | 'AUTO'
+  primaryAxisAlignItems: 'MIN' | 'MAX' | 'CENTER' | 'SPACE_BETWEEN'
+  counterAxisAlignItems: 'MIN' | 'MAX' | 'CENTER' | 'BASELINE'
+  counterAxisAlignContent: 'AUTO' | 'SPACE_BETWEEN'
+  itemSpacing: number
+  counterAxisSpacing: number | null
+  itemReverseZIndex: boolean
+  strokesIncludedInLayout: boolean
+}
