@@ -1,0 +1,10 @@
+{
+  "name": "render-type-scale",
+  "id": "1258064928428314290",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

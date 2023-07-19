@@ -1,0 +1,10 @@
+{
+  "name": "tut-2-text",
+  "id": "1258061921428314290",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}
