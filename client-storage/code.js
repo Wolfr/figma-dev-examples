@@ -17,4 +17,7 @@ Promise.all([
 })
 .catch((error) => {
   console.error('Error:', error);
+})
+.then(() => {
+  figma.closePlugin();
 });

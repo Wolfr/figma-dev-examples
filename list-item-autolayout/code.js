@@ -160,6 +160,8 @@ loadFonts().then(() => {
       listItem.fills = [{type : "SOLID", color: { r: 1, g: 1, b: 1 }}];
       listItem.counterAxisSizingMode = "AUTO"
 
+    }).then(() => {
+      figma.closePlugin()
     })
 
 });

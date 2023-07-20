@@ -36,4 +36,6 @@ Promise.all(fontPromises)
   .catch(error => {
     figma.notify('Error loading fonts:' + error);
     // Handle the error here or propagate it further
+  }).then(() => {
+    figma.closePlugin()
   });

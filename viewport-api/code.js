@@ -11,3 +11,5 @@ let viewportWidth = figma.viewport.bounds.width
 console.log("viewportWidth is " + viewportWidth)
 let viewportHeight = figma.viewport.bounds.height
 console.log("viewportHeight is " + viewportHeight)
+
+figma.closePlugin()

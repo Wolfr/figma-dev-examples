@@ -1,21 +1,23 @@
-// By default, notifications will show after each other, with 2000ms delay?
-figma.notify('Hey, this figlet is meant to teach you about the notification API')
+async function myNotifications() {
+  // By default, notifications will show after each other, with 2000ms delay?
+  await figma.notify('Hey, this code is meant to teach you about the notification API')
 
-figma.notify('You can use the notification API to send notifications to users.')
+  await figma.notify('You can use the notify API to send notifications to users.')
 
-// You could make it go faster with a timeout
-figma.notify('You can', { timeout: 500})
-figma.notify('use the ', { timeout: 500})
-figma.notify('timeout option', { timeout: 500})
-figma.notify('to make things', { timeout: 500})
-figma.notify('go a bit faster', { timeout: 500})
-figma.notify('(or slower...)', { timeout: 2500})
+  // You could make it go faster with a timeout
+  await figma.notify('You can', { timeout: 500})
+  await figma.notify('use the ', { timeout: 500})
+  await figma.notify('timeout option', { timeout: 500})
+  await figma.notify('to make things', { timeout: 500})
+  await figma.notify('go a bit faster', { timeout: 500})
+  await figma.notify('(or slower...)', { timeout: 2500})
 
-figma.notify('⚠️ You can also display an error', { error: true})
+  await figma.notify('⚠️ You can also display an error', { error: true})
+}
 
-// function myAlert() {
-//     console.log('hey my action')
-// }
+async function runPlugin() {
+  await myNotifications();
+  figma.closePlugin();
+}
 
-// figma.notify('(or slower)', { button: 'text', action: myAlert })
-
+runPlugin();

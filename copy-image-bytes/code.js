@@ -23,4 +23,9 @@ if( figma.currentPage.selection.length > 1 ) {
 }
 
 // Select an image
-copyBytes(figma.currentPage.selection[0])
+async function runPlugin() {
+  await copyBytes(figma.currentPage.selection[0])
+  figma.closePlugin();
+}
+
+runPlugin();

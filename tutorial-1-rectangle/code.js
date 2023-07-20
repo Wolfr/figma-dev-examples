@@ -20,3 +20,5 @@ function createMyRectangle(rgbColor, width, height, x, y) {
 
 createMyRectangle([255,125,250], 50, 50, 0, 0 )
 createMyRectangle([125,110,250], 50, 50, 0, 50 )
+
+figma.closePlugin();

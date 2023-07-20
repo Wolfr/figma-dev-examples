@@ -1,3 +1,13 @@
+
+async function loadFonts() {
+    await Promise.all([
+        figma.loadFontAsync({
+            family: "Inter",
+            style: "Regular"
+        }),
+    ])
+}
+
 function clone(val) {
   return JSON.parse(JSON.stringify(val))
 }
@@ -11,32 +21,37 @@ function setColor(node, rgbColor) {
     node.fills = fills
 }
 
-const text = figma.createText()
+loadFonts().then(() => {
 
-figma.loadFontAsync(text.fontName).then(() => {
-    text.characters = 'Username'
-    text.x = 60
-    text.y = 0
-})
+  const text = figma.createText()
+  text.characters = 'Username'
+  text.x = 60
+  text.y = 0
 
-const text2 = figma.createText()
-text2.characters = 'Meta • meta • meta'
-text2.x = 60
-text2.y = 20
-text2.opacity = .5
+  const text2 = figma.createText()
+  text2.characters = 'Meta • meta • meta'
+  text2.x = 60
+  text2.y = 20
+  text2.opacity = .5
 
-const rect = figma.createRectangle()
-rect.resize(290,1)
-rect.name = "Divider"
-rect.x = 50
-rect.y = 50
+  const rect = figma.createRectangle()
+  rect.resize(290,1)
+  rect.name = "Divider"
+  rect.x = 50
+  rect.y = 50
 
-const parent = figma.currentPage
-const group = figma.group([text,rect], parent)
+  const parent = figma.currentPage
+  const group = figma.group([text,rect], parent)
 
-const circle = figma.createEllipse()
-circle.resize(40, 40)
-setColor(circle, [50,50,50])
+  const circle = figma.createEllipse()
+  circle.resize(40, 40)
+  setColor(circle, [50,50,50])
 
-group.appendChild(text2)
-group.appendChild(circle)
+  group.appendChild(text2)
+  group.appendChild(circle)
+
+  figma.viewport.scrollAndZoomIntoView([group])
+
+  figma.closePlugin()
+
+});

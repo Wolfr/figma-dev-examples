@@ -57,5 +57,6 @@ loadFonts().then(() => {
     link.textDecoration = "UNDERLINE"
     setColor(link, [65,111,181])
 
+    figma.closePlugin();
 });
 

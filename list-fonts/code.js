@@ -1,4 +1,5 @@
 figma.listAvailableFontsAsync().then(fonts => {
+  figma.notify('Look in your dev console.')
   console.log(fonts)
   for (const font of fonts) {
     if (font.fontName.family === 'My Font' && font.fontName.style === 'Regular') {
@@ -11,6 +12,8 @@ figma.listAvailableFontsAsync().then(fonts => {
         });
     }
   }
+}).then(() => {
+  figma.closePlugin();
 }).catch(error => {
   console.error('Failed to retrieve available fonts:', error);
 });
