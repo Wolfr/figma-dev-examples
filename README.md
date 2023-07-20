@@ -2,9 +2,11 @@
 
 This repo contains several Figma plugin examples.
 
-They are as simple as possible, one concept per folder.
+They are as simple as possible, showing one concept per example.
 
-To run them, point Figma to the manifest.json file in each folder.
+To run them, point Figma to the `manifest.json` file in each folder. The plugin will then import locally.
+
+Doing this will only work in the desktop version of Figma.
 
 Almost all examples are straight Javascript and require no compilation step.
 
