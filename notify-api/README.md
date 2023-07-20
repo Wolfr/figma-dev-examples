@@ -1,3 +1,5 @@
 # Notify API
 
-Experimenting with the notify API.
+What you can do with the notify API.
+
+![Screenshot](screenshot.png)
