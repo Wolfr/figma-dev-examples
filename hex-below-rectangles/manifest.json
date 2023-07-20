@@ -2,7 +2,7 @@
   "name": "hex-colour-value-below-rect",
   "id": "1258064928428314290",
   "api": "1.0.0",
-  "main": "dist/code.js",
+  "main": "code.js",
   "editorType": ["figma"],
   "networkAccess": {
     "allowedDomains": ["none"]
